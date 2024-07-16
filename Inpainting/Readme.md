@@ -1,5 +1,5 @@
 
-# Virtual Try-On (Inpainting)
+# Virtual Try-On
 
 This project provides a virtual try-on experience by leveraging background removal and inpainting techniques. It uses the `rembg` library for background removal and the `diffusers` library for inpainting with Stable Diffusion. The application is built with Streamlit to provide an easy-to-use web interface.
 
