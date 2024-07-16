@@ -5,11 +5,17 @@ This project provides a virtual try-on experience by leveraging background remov
 
 ## Table of Contents
 1. [Introduction](#introduction)
+   
 2. [Solution Architecture](#solution-architecture)
+   
 3. [Tools/Models Used](#toolsmodels-used)
+
 4. [Installation](#installation)
+
 5. [Usage](#usage)
+
 6. [Example](#example)
+
 7. [Dependencies](#dependencies)
 
 ## Introduction
@@ -75,7 +81,7 @@ To use the application, follow these steps:
 
 4. **Generate the inpainted image:** Click the "Generate" button to create the inpainted image. The application will display the original and the inpainted images side by side. This allows you to compare the results and see the transformation instantly.
 
-### Example Output
+## Example
 
 - **Output Image:**
   ![Example Input](https://raw.githubusercontent.com/Prajnabhandary/VITON/main/Inpainting/img_3.png)
