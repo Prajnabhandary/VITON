@@ -1,88 +1,103 @@
+
 # Virtual Try-On (Inpainting)
 
 This project provides a virtual try-on experience by leveraging background removal and inpainting techniques. It uses the `rembg` library for background removal and the `diffusers` library for inpainting with Stable Diffusion. The application is built with Streamlit to provide an easy-to-use web interface.
 
-### What we have?
-We have an end-to-end pipeline/framework for generating virtual try-on images by removing backgrounds and using inpainting techniques. This approach can be adapted to various use cases involving image processing and manipulation.
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Solution Architecture](#solution-architecture)
+   1. [Solution Diagram](#solution-diagram)
+   2. [Brief about the Architecture](#brief-about-the-architecture)
+3. [Tools/Models Used](#toolsmodels-used)
+4. [Example](#example)
+   1. [Example Output](#example-output)
+   2. [Actual Output](#actual-output)
+5. [Installation](#installation)
+6. [Usage](#usage)
+7. [Dependencies](#dependencies)
 
-<div id="top"></div>
-<h3 align="center">Virtual Try-On Architecture and How to Use It</h3>
+## Introduction
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#work-flow">Work Flow</a></li>
-    <li><a href="#installation">Installation</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#code-explanation">Code Explanation</a></li>
-    <li><a href="#dependencies">Dependencies</a></li>
-  </ol>
-</details>
+The Virtual Try-On (Inpainting) project is designed to offer a seamless and realistic virtual try-on experience. By utilizing advanced image processing techniques, we can remove the background from an image and apply inpainting to generate a high-quality visualization of the subject in various settings or outfits. This technology can be applied to online shopping, virtual fitting rooms, and other domains where visual representation is crucial.
 
-<a name="readme-top"></a>
-## Work Flow
-The below image shows the end-to-end pipeline of the virtual try-on framework:
+## Solution Architecture
+
+### Solution Diagram
+
+![Solution Architecture Diagram](![Uploading arch_diagram.jpg…]()
+)
+
+### Brief about the Architecture
+
+The solution architecture consists of an end-to-end pipeline for generating virtual try-on images. The process begins with background removal using the `rembg` library, which efficiently isolates the subject from the background. The next step involves inpainting the isolated subject into a new context or environment using the `diffusers` library and the Stable Diffusion model. This architecture is highly adaptable and can be extended to various image processing and manipulation applications.
+
+## Tools/Models Used
+
+- **Background Removal:** The `rembg` library is employed to accurately remove the background from images, leaving only the subject.
+- **Inpainting:** The `diffusers` library with the Stable Diffusion model is used to seamlessly blend the subject into a new background or environment.
+- **Web Interface:** Streamlit is utilized to create a user-friendly web interface, allowing users to easily upload images and view the inpainting results.
 
 ## Installation
 
-1. Clone the repository:
+To set up the project, follow these steps:
 
-   git clone https://github.com/your-org/virtual-try-on.git
-   cd virtual-try-on
+1. **Clone the repository:** Open your terminal and run the following command to clone the repository to your local machine.
 
+    ```sh
+    git clone https://github.com/your-org/virtual-try-on.git
+    cd virtual-try-on
+    ```
 
-2. Install the required dependencies:
+2. **Install the required dependencies:** Navigate to the project directory and install all the necessary dependencies by running the following command.
 
-   pip install -r requirements.txt
+    ```sh
+    pip install -r requirements.txt
+    ```
 
+3. **Download the necessary model for inpainting:** Run the following Python commands to download and set up the inpainting model.
 
-3. Ensure you have the necessary model for inpainting downloaded:
-
-   from diffusers import AutoPipelineForInpainting
-   pipeline = AutoPipelineForInpainting.from_pretrained(
-       "runwayml/stable-diffusion-inpainting", torch_dtype=torch.float16, variant="fp16", safety_checker=None,
-       requires_safety_checker=False
-   ).to("cuda")
-
+    ```python
+    from diffusers import AutoPipelineForInpainting
+    pipeline = AutoPipelineForInpainting.from_pretrained(
+        "runwayml/stable-diffusion-inpainting", torch_dtype=torch.float16, variant="fp16", safety_checker=None,
+        requires_safety_checker=False
+    ).to("cuda")
+    ```
 
 ## Usage
 
-1. Run the Streamlit application:
+To use the application, follow these steps:
 
-   streamlit run app.py
+1. **Run the Streamlit application:** Open your terminal and navigate to the project directory. Run the following command to start the Streamlit application.
+
+    ```sh
+    streamlit run app.py
+    ```
+
+2. **Open your web browser:** Once the Streamlit application is running, open your web browser and navigate to `http://localhost:8501`.
+
+3. **Upload an image:** Use the file uploader provided in the web interface to upload an image you want to process.
+
+4. **Generate the inpainted image:** Click the "Generate" button to create the inpainted image. The application will display the original and the inpainted images side by side.
 
 
-2. Open your web browser and navigate to `http://localhost:8501`.
+### Example Output
 
-3. Upload an image using the file uploader.
+- **Input Image:**
+  ![Example Input](path_to_example_input_image)
+- **Generated Image:**
+  ![Example Output](path_to_example_output_image)
 
-4. Click the "Generate" button to create the inpainted image.
 
-## Code Explanation
-
-### `process_image`
-
-The `process_image` function handles the image processing workflow:
-- Removes the background using the `rembg` library.
-- Creates and inverts the mask.
-- Loads the Stable Diffusion inpainting model.
-- Generates the inpainted image using a specified prompt.
-- Saves the inpainted image to the specified output path.
-
-### Streamlit Application
-
-The Streamlit application:
-- Displays the original uploaded image.
-- Calls the `process_image` function to generate the inpainted image.
-- Displays the inpainted image next to the original image.
 
 ## Dependencies
 
-- `streamlit`
-- `rembg`
-- `Pillow`
-- `torch`
-- `diffusers`
+This project requires the following dependencies:
+
+- `streamlit`: A framework for creating interactive web applications.
+- `rembg`: A library for removing the background from images.
+- `Pillow`: A Python Imaging Library that adds image processing capabilities.
+- `torch`: A deep learning framework used for training and deploying machine learning models.
+- `diffusers`: A library for using diffusion models, such as Stable Diffusion, for inpainting.
 
 Ensure you have a CUDA-compatible GPU and the necessary drivers installed for the best performance.
