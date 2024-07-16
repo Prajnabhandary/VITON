@@ -24,8 +24,8 @@ The Virtual Try-On (Inpainting) project is designed to offer a seamless and real
 
 ### Solution Diagram
 
-![Solution Architecture Diagram](![Uploading arch_diagram.jpg…]()
-)
+![Solution Architecture Diagram](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/Arch_daigram.jpg)
+
 
 ### Brief about the Architecture
 
