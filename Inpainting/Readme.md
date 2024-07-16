@@ -69,7 +69,7 @@ To use the application, follow these steps:
     streamlit run app.py
     ```
 
-2. **Open your web browser:** Once the Streamlit application is running, open your web browser and navigate to \`http://localhost:8501\`.
+2. **Open your web browser:** Once the Streamlit application is running, open your web browser and navigate to `http://localhost:8501`.
 
 3. **Upload an image:** Use the file uploader provided in the web interface to upload an image you want to process. You can upload images in various formats including JPG, PNG, and JPEG.
 
