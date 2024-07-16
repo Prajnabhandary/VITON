@@ -81,8 +81,10 @@ To use the application, follow these steps:
 
 ### Example Output
 
+
 - **Output Image:**
-  ![Example Input](https://raw.githubusercontent.com/Prajnabhandary/VITON/fix-issue/Inpainting/img_3.png)
+  ![Example Input](https://raw.githubusercontent.com/Prajnabhandary/VITON/main/Inpainting/img_3.png)
+
 
 
 
