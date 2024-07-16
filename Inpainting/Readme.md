@@ -10,8 +10,6 @@ This project provides a virtual try-on experience by leveraging background remov
    2. [Brief about the Architecture](#brief-about-the-architecture)
 3. [Tools/Models Used](#toolsmodels-used)
 4. [Example](#example)
-   1. [Example Output](#example-output)
-   2. [Actual Output](#actual-output)
 5. [Installation](#installation)
 6. [Usage](#usage)
 7. [Dependencies](#dependencies)
@@ -85,8 +83,6 @@ To use the application, follow these steps:
 
 - **Output 1:**
   ![Example Input](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_1.png)
-- **Output 2:**
-  ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_2.png)
 
 
 
