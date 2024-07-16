@@ -83,10 +83,10 @@ To use the application, follow these steps:
 
 ### Example Output
 
-- **Input Image:**
-  ![Example Input](path_to_example_input_image)
-- **Generated Image:**
-  ![Example Output](path_to_example_output_image)
+- **Output 1:**
+  ![Example Input](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_1.png)
+- **Output 2:**
+  ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_2.png)
 
 
 
