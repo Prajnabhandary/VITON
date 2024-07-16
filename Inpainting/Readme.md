@@ -6,8 +6,6 @@ This project provides a virtual try-on experience by leveraging background remov
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Solution Architecture](#solution-architecture)
-   1. [Solution Diagram](#solution-diagram)
-   2. [Brief about the Architecture](#brief-about-the-architecture)
 3. [Tools/Models Used](#toolsmodels-used)
 4. [Example](#example)
 5. [Installation](#installation)
@@ -20,12 +18,7 @@ The Virtual Try-On (Inpainting) project is designed to offer a seamless and real
 
 ## Solution Architecture
 
-### Solution Diagram
-
 ![Solution Architecture Diagram](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/Arch_daigram.jpg)
-
-
-### Brief about the Architecture
 
 The solution architecture consists of an end-to-end pipeline for generating virtual try-on images. The process begins with background removal using the `rembg` library, which efficiently isolates the subject from the background. The next step involves inpainting the isolated subject into a new context or environment using the `diffusers` library and the Stable Diffusion model. This architecture is highly adaptable and can be extended to various image processing and manipulation applications.
 
