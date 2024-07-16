@@ -36,26 +36,26 @@ Setting up the project is straightforward. Follow these steps to get started:
 
 1. **Clone the repository:** Open your terminal and run the following command to clone the repository to your local machine.
 
-    \`\`\`sh
+    ```sh
     git clone https://github.com/your-org/virtual-try-on.git
     cd virtual-try-on
-    \`\`\`
+    ```
 
 2. **Install the required dependencies:** Navigate to the project directory and install all the necessary dependencies by running the following command.
 
-    \`\`\`sh
+    ```sh
     pip install -r requirements.txt
-    \`\`\`
+    ```
 
 3. **Download the necessary model for inpainting:** Run the following Python commands to download and set up the inpainting model.
 
-    \`\`\`python
+    ```python
     from diffusers import AutoPipelineForInpainting
     pipeline = AutoPipelineForInpainting.from_pretrained(
         "runwayml/stable-diffusion-inpainting", torch_dtype=torch.float16, variant="fp16", safety_checker=None,
         requires_safety_checker=False
     ).to("cuda")
-    \`\`\`
+    ```
 
 This will set up the environment and download the necessary models to get the application running.
 
@@ -65,9 +65,9 @@ To use the application, follow these steps:
 
 1. **Run the Streamlit application:** Open your terminal and navigate to the project directory. Run the following command to start the Streamlit application.
 
-    \`\`\`sh
+    ```sh
     streamlit run app.py
-    \`\`\`
+    ```
 
 2. **Open your web browser:** Once the Streamlit application is running, open your web browser and navigate to \`http://localhost:8501\`.
 
@@ -86,10 +86,10 @@ By following these steps, you can easily generate high-quality inpainted images 
 
 This project requires the following dependencies:
 
-- \`streamlit\`: A framework for creating interactive web applications. Streamlit makes it easy to build and deploy data-driven applications with minimal effort.
-- \`rembg\`: A library for removing the background from images. This is a critical component of our pipeline, ensuring that the subject is accurately isolated from the background.
-- \`Pillow\`: A Python Imaging Library that adds image processing capabilities. Pillow provides various functions for manipulating images, which are used throughout our application.
-- \`torch\`: A deep learning framework used for training and deploying machine learning models. PyTorch is known for its flexibility and ease of use, making it ideal for our needs.
-- \`diffusers\`: A library for using diffusion models, such as Stable Diffusion, for inpainting. This library allows us to seamlessly blend the subject into new backgrounds, creating a realistic try-on experience.
+- `streamlit`: A framework for creating interactive web applications. Streamlit makes it easy to build and deploy data-driven applications with minimal effort.
+- `rembg`: A library for removing the background from images. This is a critical component of our pipeline, ensuring that the subject is accurately isolated from the background.
+- `Pillow`: A Python Imaging Library that adds image processing capabilities. Pillow provides various functions for manipulating images, which are used throughout our application.
+- `torch`: A deep learning framework used for training and deploying machine learning models. PyTorch is known for its flexibility and ease of use, making it ideal for our needs.
+- `diffusers`: A library for using diffusion models, such as Stable Diffusion, for inpainting. This library allows us to seamlessly blend the subject into new backgrounds, creating a realistic try-on experience.
 
 Ensure you have a CUDA-compatible GPU and the necessary drivers installed for the best performance. This will significantly speed up the processing time and improve the quality of the generated images.
