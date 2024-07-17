@@ -10,13 +10,7 @@ This project provides a virtual try-on experience by leveraging background remov
    
 3. [Tools/Models Used](#toolsmodels-used)
 
-4. [Installation](#installation)
-
-5. [Usage](#usage)
-
-6. [Example](#example)
-
-7. [Dependencies](#dependencies)
+4. [Example](#example)
 
 ## Introduction
 
@@ -36,7 +30,11 @@ We have carefully selected the following tools and models to achieve the best re
 - **Inpainting:** The `diffusers` library with the Stable Diffusion model is used to seamlessly blend the subject into a new background or environment. This allows us to place the subject in various settings, providing a realistic preview of how the subject would look in different contexts.
 - **Web Interface:** Streamlit is utilized to create a user-friendly web interface, allowing users to easily upload images and view the inpainting results. The interface is designed to be intuitive and accessible, ensuring a smooth user experience.
 
-## Installation
+
+
+## Example
+
+To set up the project, follow the below steps to get started:
 
 1. **Clone the repository:** Open your terminal and run the following command to clone the repository to your local machine.
 
@@ -51,42 +49,27 @@ We have carefully selected the following tools and models to achieve the best re
     pip install -r requirements.txt
     ```
 
-3. **Download the necessary model for inpainting:** Run the following Python commands to download and set up the inpainting model.
 
-    ```python
-    from diffusers import AutoPipelineForInpainting
-    pipeline = AutoPipelineForInpainting.from_pretrained(
-        "runwayml/stable-diffusion-inpainting", torch_dtype=torch.float16, variant="fp16", safety_checker=None,
-        requires_safety_checker=False
-    ).to("cuda")
-    ```
+3. To use the application, follow these steps:
 
-This will set up the environment and download the necessary models to get the application running.
-
-## Usage
-
-1. **Run the Streamlit application:** Open your terminal and navigate to the project directory. Run the following command to start the Streamlit application.
+- **Run the Streamlit application:** Open your terminal and navigate to the project directory. Run the following command to start the Streamlit application.
 
     ```sh
     streamlit run app.py
     ```
 
-2. **Open your web browser:** Once the Streamlit application is running, open your web browser and navigate to `http://localhost:8501`.
+- **Open your web browser:** Once the Streamlit application is running, open your web browser and navigate to `http://localhost:8501`.
 
-3. **Upload an image:** Use the file uploader provided in the web interface to upload an image you want to process. You can upload images in various formats including JPG, PNG, and JPEG.
+- **Upload an image:** Use the file uploader provided in the web interface to upload an image you want to process. You can upload images in various formats including JPG, PNG, and JPEG.
 
-4. **Generate the inpainted image:** Click the "Generate" button to create the inpainted image. The application will display the original and the inpainted images side by side. This allows you to compare the results and see the transformation instantly.
-
-## Example
+- **Generate the inpainted image:** Click the "Generate" button to create the inpainted image. The application will display the original and the inpainted images side by side. This allows you to compare the results and see the transformation instantly.
 
 - **Output Image:**
   ![Example Input](https://raw.githubusercontent.com/Prajnabhandary/VITON/main/Inpainting/img_3.png)
-
 By following these steps, you can easily generate high-quality inpainted images that provide a realistic preview of the subject in different settings.
 
-## Dependencies
 
-This project requires the following dependencies:
+The following dependencies are required for this project:
 
 - `streamlit`: A framework for creating interactive web applications. Streamlit makes it easy to build and deploy data-driven applications with minimal effort.
 - `rembg`: A library for removing the background from images. This is a critical component of our pipeline, ensuring that the subject is accurately isolated from the background.
