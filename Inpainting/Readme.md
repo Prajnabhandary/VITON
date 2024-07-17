@@ -38,8 +38,6 @@ We have carefully selected the following tools and models to achieve the best re
 
 ## Installation
 
-Setting up the project is straightforward. Follow these steps to get started:
-
 1. **Clone the repository:** Open your terminal and run the following command to clone the repository to your local machine.
 
     ```sh
@@ -66,8 +64,6 @@ Setting up the project is straightforward. Follow these steps to get started:
 This will set up the environment and download the necessary models to get the application running.
 
 ## Usage
-
-To use the application, follow these steps:
 
 1. **Run the Streamlit application:** Open your terminal and navigate to the project directory. Run the following command to start the Streamlit application.
 
