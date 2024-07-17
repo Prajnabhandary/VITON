@@ -87,7 +87,7 @@ To set up the project, follow the steps below:
 
 
 - **Output Image**:
-  ![Example Output](path_to_example_output_image)
+  ![Example Output](https://drive.google.com/drive/folders/1Fr7kHRLEifeUHgnnyRn0djvqlI2teVm0)
 
 
 Ensure you have a CUDA-compatible GPU and the necessary drivers installed for the best performance.
