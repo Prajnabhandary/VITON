@@ -34,7 +34,7 @@ We have carefully selected the following tools and models to achieve the best re
 
 ## Example
 
-To set up the project, follow the below steps to get started:
+To set up the project, follow the below steps:
 
 1. **Clone the repository:** Open your terminal and run the following command to clone the repository to your local machine.
 
@@ -67,14 +67,5 @@ To set up the project, follow the below steps to get started:
 - **Output Image:**
   ![Example Input](https://raw.githubusercontent.com/Prajnabhandary/VITON/main/Inpainting/img_3.png)
 By following these steps, you can easily generate high-quality inpainted images that provide a realistic preview of the subject in different settings.
-
-
-The following dependencies are required for this project:
-
-- `streamlit`: A framework for creating interactive web applications. Streamlit makes it easy to build and deploy data-driven applications with minimal effort.
-- `rembg`: A library for removing the background from images. This is a critical component of our pipeline, ensuring that the subject is accurately isolated from the background.
-- `Pillow`: A Python Imaging Library that adds image processing capabilities. Pillow provides various functions for manipulating images, which are used throughout our application.
-- `torch`: A deep learning framework used for training and deploying machine learning models. PyTorch is known for its flexibility and ease of use, making it ideal for our needs.
-- `diffusers`: A library for using diffusion models, such as Stable Diffusion, for inpainting. This library allows us to seamlessly blend the subject into new backgrounds, creating a realistic try-on experience.
 
 Ensure you have a CUDA-compatible GPU and the necessary drivers installed for the best performance. This will significantly speed up the processing time and improve the quality of the generated images.
