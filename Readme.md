@@ -87,7 +87,7 @@ To set up the project, follow the steps below:
 
 
 - **Output Image**:
-  ![Example Output](C:\Users\prajna.bhandary\Desktop\Screenshot (1177).png)
+  ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/Img_4.png)
 
 
 Ensure you have a CUDA-compatible GPU and the necessary drivers installed for the best performance.
