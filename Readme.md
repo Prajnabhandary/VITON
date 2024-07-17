@@ -21,7 +21,6 @@ The solution architecture of DM-VTON consists of an end-to-end pipeline designed
 
 ![Solution Architecture Diagram](https://raw.githubusercontent.com/KiseKloset/DM-VTON/assets/model_diagram.png)
 
-### Brief About the Architecture
 1. **User Uploads**:
     - The user uploads two images: an original image of themselves and an image of the clothing item they wish to try on.
 
