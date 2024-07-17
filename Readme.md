@@ -1,4 +1,3 @@
-
 # DM-VTON: Virtual Try-On
 
 ## Table of Contents
