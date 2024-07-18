@@ -39,7 +39,7 @@ The solution architecture of DM-VTON consists of an end-to-end pipeline designed
 
 ## Tools and Models Used
 
-## Background Removal with `rembg`
+### Background Removal with `rembg`
 
 The `rembg` tool is utilized to remove the background from images with high precision. Leveraging advanced deep learning algorithms, `rembg` accurately distinguishes and eliminates the background, isolating the foreground object effectively. This process is crucial for ensuring that only the clothing item remains in the image, free from any extraneous background elements. This capability is particularly useful for applications such as:
 
@@ -49,7 +49,7 @@ The `rembg` tool is utilized to remove the background from images with high prec
 
 By achieving clean and precise object separation, `rembg` enhances the quality and usability of images for various applications.
 
-## Image Warping with `MobileAFWM` (Mobile Affine Flow Warping Module)
+### Image Warping with `MobileAFWM` (Mobile Affine Flow Warping Module)
 
 The `MobileAFWM` model is essential for aligning the clothing image with the person image. By employing affine transformations, this model estimates a flow field that dictates how each pixel in the clothing image should be moved to perfectly align with the person’s pose and shape. This warping process ensures that the garment fits naturally onto the person’s body. The technique is widely used in:
 
@@ -59,7 +59,7 @@ The `MobileAFWM` model is essential for aligning the clothing image with the per
 
 where precise alignment between images is necessary. The `MobileAFWM` model enhances the realism and accuracy of the virtual try-on experience by ensuring that the clothing fits seamlessly onto the person's image.
 
-## Image Blending with `MobileNetV2_unet`
+### Image Blending with `MobileNetV2_unet`
 
 The `MobileNetV2_unet` model is responsible for synthesizing and blending images to create the final try-on result. Utilizing a U-Net architecture, this model combines features from both the person image and the warped clothing image. It excels at generating cohesive and realistic output images by blending the input images seamlessly. The applications of this model extend to:
 
