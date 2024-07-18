@@ -23,16 +23,19 @@ The solution architecture of DM-VTON consists of an end-to-end pipeline designed
 
 ![Solution Architecture Diagram]()
 
-1. **User Uploads**:
-    - The user uploads two images: an original image of themselves and an image of the clothing item they wish to try on.
+## Workflow
 
-2. **Preprocessing**:
-    - **Resizing**: Both images are resized to a standard dimension (192x256) to ensure consistency and optimal performance during the try-on process.
-    - **Masking**: A mask of the clothing item is generated using the `rembg` tool, which helps in isolating the clothing item from its background.
+1. **Upload Images**: Users interact with a web interface to upload two images: one of the person and one of the clothing item they wish to try on. The interface supports common image formats such as JPG and PNG.
+   
+2. **Preprocessing**: 
+   - **Resize Images**: The uploaded images are resized to a standard resolution suitable for processing. This ensures consistency and improves the efficiency of the subsequent steps.
+   - **Background Removal**: The `rembg` tool is used to remove the background from the clothing image. This step isolates the garment, creating a mask that highlights the clothing item and discards any unwanted background elements.
 
-3. **Virtual Try-On**:
-    - **Pipeline Initialization**: A deep learning pipeline, `DMVTONPipeline`, is initialized with pre-trained models for warping the clothing item to fit the user's body shape and for generating the final try-on image.
-    - **Image Generation**: The pipeline takes the resized original image, the resized clothing image, and the generated mask as inputs to produce a realistic virtual try-on image. The result is saved and displayed to the user.
+3. **Warping**: The preprocessed clothing image and mask are fed into the `MobileAFWM` (Mobile Affine Flow Warping Module) model. This model aligns the clothing image with the person image by estimating a flow field that accurately deforms the clothing to match the shape and pose of the person. This step ensures that the garment fits naturally on the person's body.
+
+4. **Blending**: The aligned clothing image, along with the person image, is passed to the `MobileNetV2_unet` model. This blending model synthesizes the final output by combining features from both images. It ensures a seamless integration of the clothing onto the person, resulting in a realistic try-on effect.
+
+5. **Display**: The final try-on image, along with the original person image and the clothing image, are displayed on the web interface. This allows users to visually compare and evaluate the virtual try-on result directly in their browser.
 
 ## Tools and Models Used
 
@@ -74,9 +77,6 @@ To set up the project, follow the steps below:
 
 - **Open your web browser**: Navigate to `http://localhost:8501`.
 
-- **Upload an image**: Use the file uploader provided in the web interface to upload an image you want to process.
-
-- **Generate the inpainted image**: Click the "Generate" button to create the inpainted image. The application will display the original and the inpainted images side by side, allowing you to compare the results and see the transformation instantly.
 
 ## Example
 
