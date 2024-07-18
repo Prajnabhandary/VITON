@@ -7,6 +7,8 @@
 - [Solution Architecture](#solution-architecture)
   
 - [Tools/Models Used](#toolsmodels-used)
+
+- [Installation](#installation-used)
   
 - [Example](#example)
 
@@ -32,36 +34,25 @@ The solution architecture of DM-VTON consists of an end-to-end pipeline designed
     - **Pipeline Initialization**: A deep learning pipeline, `DMVTONPipeline`, is initialized with pre-trained models for warping the clothing item to fit the user's body shape and for generating the final try-on image.
     - **Image Generation**: The pipeline takes the resized original image, the resized clothing image, and the generated mask as inputs to produce a realistic virtual try-on image. The result is saved and displayed to the user.
 
-## Tools/Models Used
+## Tools and Models Used
 
-- **Streamlit**: Creates an interactive web interface for uploading images and displaying results.
+### Masking: `rembg`
+- **Purpose**: Removes the background from images.
+- **Function**: Utilizes deep learning to distinguish and eliminate the background, isolating the foreground object.
+- **Use Case**: Useful for photo editing, object isolation, and background replacement.
 
-- **PIL (Pillow)**: Opens, manipulates, and saves images.
+### Warping: `MobileAFWM` (Mobile Affine Flow Warping Module)
+- **Purpose**: Aligns the clothing image with the person image.
+- **Function**: Uses affine transformations to estimate a flow field that aligns one image to another.
+- **Use Case**: Employed in image registration, optical flow, and augmented reality.
 
-- **rembg**: Removes the background from the clothing image, creating a mask to isolate the clothing item.
-
-- **torch**: Provides tools for building and deploying neural networks.
-
-- **tqdm**:Displays progress bars to make processing steps transparent to the user.
-
-- **cupy**: Accelerates computations using CUDA-based GPU computing.
-
-- **thop**: Computes the number of operations in neural networks for profiling.
-
-- **torchvision**: Includes popular datasets, model architectures, and image transformations for computer vision tasks.
-
-- **utils.general**: Contains utility functions for profiling, logging, and warming up the model.
-
-- **utils.metrics**: Calculates evaluation metrics like FID (Fréchet Inception Distance) and LPIPS (Learned Perceptual Image Patch Similarity).
-
-- **utils.torch_utils**: Provides utility functions for selecting devices and optimizing performance.
-
-- **SingleImageDataset**: Loads single image data for the virtual try-on process.
-
-- **DMVTONPipeline**: Integrates different stages of the virtual try-on process, including image warping and generation.
+### Blending: `MobileNetV2_unet`
+- **Purpose**: Synthesizes and blends images.
+- **Function**: Combines features from multiple images using a U-Net architecture to generate a cohesive output image.
+- **Use Case**: Applied in image inpainting, style transfer, and image translation.
 
 
-## Example
+## Installation
 
 To set up the project, follow the steps below:
 
@@ -87,6 +78,7 @@ To set up the project, follow the steps below:
 
 - **Generate the inpainted image**: Click the "Generate" button to create the inpainted image. The application will display the original and the inpainted images side by side, allowing you to compare the results and see the transformation instantly.
 
+## Example
 
 - **Output Image**:
   ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/Img_4.png)
