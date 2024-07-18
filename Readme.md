@@ -19,7 +19,7 @@ This application allows users to visualize how different clothing items will loo
 
 The solution architecture of DM-VTON consists of an end-to-end pipeline designed to generate virtual try-on images efficiently. Below is the architecture diagram:
 
-![Solution Architecture Diagram]([https://raw.githubusercontent.com/KiseKloset/DM-VTON/assets/model_diagram.png](https://github.com/Prajnabhandary/VITON/blob/fix-issue/Inpainting/img_6.jpg)
+![Solution Architecture Diagram](https://github.com/Prajnabhandary/VITON/blob/fix-issue/Inpainting/img_6.jpg)
 
 1. **User Uploads**:
     - The user uploads two images: an original image of themselves and an image of the clothing item they wish to try on.
