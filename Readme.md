@@ -37,37 +37,34 @@ The solution architecture of DM-VTON consists of an end-to-end pipeline designed
 
 5. **Display**: The final try-on image, along with the original person image and the clothing image, are displayed on the web interface. This allows users to visually compare and evaluate the virtual try-on result.
 
-## Tools and Models Used
+## Tools and Models
 
-### Background Removal with `rembg`
+### 1. Background Removal with `rembg`
 
-The `rembg` tool is utilized to remove the background from images with high precision. Leveraging advanced deep learning algorithms, `rembg` accurately distinguishes and eliminates the background, isolating the foreground object effectively. This process is crucial for ensuring that only the clothing item remains in the image, free from any extraneous background elements. This capability is particularly useful for applications such as:
+The `rembg` tool is used to remove backgrounds from images with high precision. By leveraging advanced deep learning algorithms, `rembg` accurately distinguishes and eliminates the background, isolating the foreground object effectively.
 
-- Photo editing
-- Object isolation
-- Background replacement
+#### Applications:
+- **Photo Editing**: Enhancing images by removing unwanted backgrounds.
+- **Object Isolation**: Extracting specific objects from an image for further processing.
+- **Background Replacement**: Changing the background of an image to suit different contexts.
 
-By achieving clean and precise object separation, `rembg` enhances the quality and usability of images for various applications.
+### 2. Image Warping with `MobileAFWM` (Mobile Affine Flow Warping Module)
 
-### Image Warping with `MobileAFWM` (Mobile Affine Flow Warping Module)
+The `MobileAFWM` model is essential for aligning the clothing image with the person image. By employing affine transformations, this model estimates a flow field that dictates how each pixel in the clothing image should be moved to perfectly align with the person’s pose and shape. This warping process ensures that the garment fits naturally onto the person’s body.
 
-The `MobileAFWM` model is essential for aligning the clothing image with the person image. By employing affine transformations, this model estimates a flow field that dictates how each pixel in the clothing image should be moved to perfectly align with the person’s pose and shape. This warping process ensures that the garment fits naturally onto the person’s body. The technique is widely used in:
+#### Applications:
+- **Image Registration**: Aligning images from different sources.
+- **Optical Flow**: Tracking motion between frames.
+- **Augmented Reality**: Ensuring precise alignment in AR applications.
 
-- Image registration
-- Optical flow
-- Augmented reality applications
+### 3. Image Blending with `MobileNetV2_unet`
 
-where precise alignment between images is necessary. The `MobileAFWM` model enhances the realism and accuracy of the virtual try-on experience by ensuring that the clothing fits seamlessly onto the person's image.
+The `MobileNetV2_unet` model synthesizes and blends images to create the final try-on result. Utilizing a U-Net architecture, this model combines features from both the person image and the warped clothing image. It excels at generating cohesive and realistic output images by blending the input images seamlessly.
 
-### Image Blending with `MobileNetV2_unet`
-
-The `MobileNetV2_unet` model is responsible for synthesizing and blending images to create the final try-on result. Utilizing a U-Net architecture, this model combines features from both the person image and the warped clothing image. It excels at generating cohesive and realistic output images by blending the input images seamlessly. The applications of this model extend to:
-
-- Image inpainting
-- Style transfer
-- Image translation
-
-making it a versatile tool for various image synthesis tasks. By ensuring smooth and realistic blending of images, `MobileNetV2_unet` enhances the overall quality and visual appeal of the virtual try-on results.
+#### Applications:
+- **Image Inpainting**: Filling in missing parts of an image.
+- **Style Transfer**: Applying the style of one image to another.
+- **Image Translation**: Converting images from one domain to another.
 
 
 ## Installation
@@ -95,10 +92,11 @@ To set up the project, follow the steps below:
 
 ## Example
 
-- **Output Image**:
+- **Output Image 1**:
   ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_7.jpg)
 
+- **Output Image 2**:
   ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_8.jpg)
+
+  
 Ensure you have a CUDA-compatible GPU and the necessary drivers installed for the best performance.
-
-
