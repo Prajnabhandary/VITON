@@ -24,13 +24,19 @@ The solution architecture consists of an end-to-end pipeline for generating virt
 
 ## Tools/Models Used
 
-We have carefully selected the following tools and models to achieve the best results for our virtual try-on application:
+### Background Removal: rembg
 
-- **Background Removal:** The `rembg` library is employed to accurately remove the background from images, leaving only the subject. This step is crucial for isolating the subject and preparing it for inpainting.
-- **Inpainting:** The `diffusers` library with the Stable Diffusion model is used to seamlessly blend the subject into a new background or environment. This allows us to place the subject in various settings, providing a realistic preview of how the subject would look in different contexts.
-- **Web Interface:** Streamlit is utilized to create a user-friendly web interface, allowing users to easily upload images and view the inpainting results. The interface is designed to be intuitive and accessible, ensuring a smooth user experience.
+The `rembg` library is used for removing the background from images, leaving only the subject. This step is crucial for isolating the subject and preparing it for inpainting.
 
+The `rembg` library is an open-source tool designed for removing the background from images. It uses deep learning models to identify and isolate the main subject in an image, effectively separating it from the background. This is particularly useful in applications such as virtual try-on, where we need to place the subject in different environments or backgrounds.
 
+### Inpainting: diffusers with Stable Diffusion
+
+The `diffusers` library with the Stable Diffusion model is used to seamlessly blend the subject into a new background or environment. This allows us to place the subject in various settings, providing a realistic preview of how the subject would look in different contexts.
+
+Stable Diffusion is a state-of-the-art generative model for image inpainting. The model is designed to fill in missing parts of an image in a way that is coherent and visually appealing. By using the `diffusers` library, we can leverage this powerful model to seamlessly blend subjects into new backgrounds or environments, creating realistic previews.
+
+By combining `rembg` for background removal and Stable Diffusion for inpainting, we create a robust system for generating high-quality virtual try-on previews. The subject can be placed in various settings, providing a realistic and immersive experience.
 
 ## Example
 
