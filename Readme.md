@@ -10,7 +10,7 @@
 
 - [Installation](#installation)
   
-- [Example](#example)
+- [Results](#results)
 
 
 ## Introduction
@@ -98,7 +98,7 @@ To set up the project, follow the steps below:
 - **Open your web browser**: Navigate to `http://localhost:8501`.
 
 
-## Example
+## Results
 
 - **Output Image 1**:
   ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_7.jpg)
