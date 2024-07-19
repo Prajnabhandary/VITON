@@ -79,12 +79,11 @@ To set up the project, follow the steps below:
    cd DM-VTON
    ```
 
-2. **Ensure you have Python 3.8 installed. Then, create and activate a virtual environment named dmvton_env:
+2. **Ensure you have Python 3.8 installed. Then, create and activate a virtual environment named dmvton_env**:
    ```sh
    python3.8 -m venv dmvton_env
    source dmvton_env/bin/activate
    ```
-
 
 3. **Install the required dependencies**:
    ```sh
