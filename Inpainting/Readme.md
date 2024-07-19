@@ -10,7 +10,9 @@ This project provides a virtual try-on experience by leveraging background remov
    
 3. [Tools/Models Used](#toolsmodels-used)
 
-4. [Results](#results)
+4. [Installation](#installation)
+
+5. [Results](#results)
 
 ## Introduction
 
