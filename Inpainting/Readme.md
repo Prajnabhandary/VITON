@@ -10,7 +10,7 @@ This project provides a virtual try-on experience by leveraging background remov
    
 3. [Tools/Models Used](#toolsmodels-used)
 
-4. [Example](#example)
+4. [Results](#results)
 
 ## Introduction
 
@@ -18,7 +18,7 @@ The Virtual Try-On (Inpainting) project is designed to offer a seamless and real
 
 ## Solution Architecture
 
-![Solution Architecture Diagram](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/Arch_daigram.jpg)
+![Solution Architecture Diagram]()
 
 The solution architecture consists of an end-to-end pipeline for generating virtual try-on images. The process begins with background removal using the `rembg` library, which efficiently isolates the subject from the background. The next step involves inpainting the isolated subject into a new context or environment using the `diffusers` library and the Stable Diffusion model. This architecture is highly adaptable and can be extended to various image processing and manipulation applications. By breaking down the process into manageable steps, we ensure a smooth and efficient workflow that produces high-quality results every time.
 
@@ -38,7 +38,7 @@ Stable Diffusion is a state-of-the-art generative model for image inpainting. Th
 
 By combining `rembg` for background removal and Stable Diffusion for inpainting, we create a robust system for generating high-quality virtual try-on previews. The subject can be placed in various settings, providing a realistic and immersive experience.
 
-## Example
+## Installation
 
 ### Prerequisites
 
@@ -73,12 +73,12 @@ To set up the project, follow the below steps:
 
 - **Open your web browser:** Once the Streamlit application is running, open your web browser and navigate to `http://localhost:8501`.
 
-- **Upload an image:** Use the file uploader provided in the web interface to upload an image you want to process. You can upload images in various formats including JPG, PNG, and JPEG.
+## Results
 
-- **Generate the inpainted image:** Click the "Generate" button to create the inpainted image. The application will display the original and the inpainted images side by side. This allows you to compare the results and see the transformation instantly.
+- **Output Image 1:**
+  ![Example Input]()
 
-- **Output Image:**
-  ![Example Input](https://raw.githubusercontent.com/Prajnabhandary/VITON/main/Inpainting/img_3.png)
-By following these steps, you can easily generate high-quality inpainted images that provide a realistic preview of the subject in different settings.
+- **Output Image 2:**
+  ![Example Input]()
 
 Ensure you have a CUDA-compatible GPU and the necessary drivers installed for the best performance. This will significantly speed up the processing time and improve the quality of the generated images.
