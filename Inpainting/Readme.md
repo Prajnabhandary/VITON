@@ -40,6 +40,13 @@ By combining `rembg` for background removal and Stable Diffusion for inpainting,
 
 ## Example
 
+### Prerequisites
+
+ **Ensure you have Python 3.8 installed. Then, create and activate a virtual environment named dmvton_env**:
+   ```sh
+   python3.8 -m venv dmvton_env
+   source dmvton_env/bin/activate
+   ```
 To set up the project, follow the below steps:
 
 1. **Clone the repository:** Open your terminal and run the following command to clone the repository to your local machine.
