@@ -8,7 +8,7 @@
   
 - [Tools/Models Used](#toolsmodels-used)
 
-- [Installation](#installation-used)
+- [Installation](#installation)
   
 - [Example](#example)
 
@@ -37,7 +37,7 @@ The solution architecture of DM-VTON consists of an end-to-end pipeline designed
 
 5. **Display**: The final try-on image, along with the original person image and the clothing image, are displayed on the web interface. This allows users to visually compare and evaluate the virtual try-on result.
 
-## Tools and Models
+## Tools/Models Used
 
 ### 1. Background Removal with `rembg`
 
