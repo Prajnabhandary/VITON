@@ -70,11 +70,6 @@ The `MobileNetV2_unet` model synthesizes and blends images to create the final t
 ## Installation
 
 ### Prerequisites
-Ensure you have Python 3.8 installed. Then, create and activate a virtual environment named dmvton_env:
-   ```sh
-   python3.8 -m venv dmvton_env
-   source dmvton_env/bin/activate
-   ```
 
 To set up the project, follow the steps below:
 
@@ -84,12 +79,19 @@ To set up the project, follow the steps below:
    cd DM-VTON
    ```
 
-2. **Install the required dependencies**:
+2. **Ensure you have Python 3.8 installed. Then, create and activate a virtual environment named dmvton_env:
+   ```sh
+   python3.8 -m venv dmvton_env
+   source dmvton_env/bin/activate
+   ```
+
+
+3. **Install the required dependencies**:
    ```sh
    pip install -r requirements.txt
    ```
 
-3. **Run the Streamlit application**:
+4. **Run the Streamlit application**:
    ```sh
    streamlit run app.py
    ```
