@@ -63,8 +63,7 @@ This image is processed to extract the text and compare it with the reference in
 
 - **Target Image 2**:
   ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_labelartwork_5.jpg)
-  Target Image 2: The second target image is another example of a product label that requires validation. Similar to target image 1,   
-  this image undergoes text extraction and comparison with the source image.
+  Target Image 2: The second target image is another example of a product label that requires validation. Similar to target image 1,this image undergoes text extraction and comparison with the source image.
 
 
 ## Metrics
