@@ -1,11 +1,27 @@
 
 # Label Artwork Comparison
 
+
+## Table of Contents
+
+- [Introduction](#introduction)
+  
+- [Solution Architecture](#solution-architecture)
+  
+- [Tools/Models Used](#toolsmodels-used)
+
+- [Installation](#installation)
+  
+- [Results](#results)
+
+
 ## Introduction
 
 Label artwork is a vital aspect of product packaging and labeling for consumer products. It guides consumers in making informed choices and helps manufacturers comply with regulatory requirements in various markets. This project applies Computer Vision (CV) techniques to compare label artwork with reference product information, ensuring compliance while reducing validation time and costs. The primary objective is to validate key elements of the label, including the product name, weight claim, and country of origin.
 
 ## Solution Architecture
+
+![Solution Architecture Diagram](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/Arch_labelartwork.png)
 
 1. **Data Input**: Convert label artwork PDFs to images for further processing.
 2. **OCR Processing**: Utilize Paddle OCR to extract text from the converted images.
@@ -35,6 +51,14 @@ The Rouge-L metric is a well-known evaluation measure used to assess the quality
 
 ## Results
 
+- **Source Image **:
+  ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_labelartwork_2.jpg)
+
+- **Target Image 1**:
+  ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_labelartwork_4.jpg)
+
+- **Target Image 2**:
+  ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_labelartwork_5.jpg)
 
 
 ## Metrics
