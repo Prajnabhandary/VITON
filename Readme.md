@@ -71,7 +71,7 @@ The `MobileNetV2_unet` model synthesizes and blends images to create the final t
 
 ### Prerequisites
 
- **Ensure you have Python 3.8 installed. Then, create and activate a virtual environment named dmvton_env**:
+ **Ensure you have Python 3.8 installed.**:
    ```sh
    python3.8 -m venv dmvton_env
    source dmvton_env/bin/activate
