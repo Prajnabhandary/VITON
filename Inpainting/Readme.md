@@ -20,7 +20,7 @@ The Virtual Try-On (Inpainting) project is designed to offer a seamless and real
 
 ## Solution Architecture
 
-![Solution Architecture Diagram]()
+![Solution Architecture Diagram](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/Inpainting_arch.jpg)
 
 The solution architecture consists of an end-to-end pipeline for generating virtual try-on images. The process begins with background removal using the `rembg` library, which efficiently isolates the subject from the background. The next step involves inpainting the isolated subject into a new context or environment using the `diffusers` library and the Stable Diffusion model. This architecture is highly adaptable and can be extended to various image processing and manipulation applications. By breaking down the process into manageable steps, we ensure a smooth and efficient workflow that produces high-quality results every time.
 
@@ -78,9 +78,9 @@ To set up the project, follow the below steps:
 ## Results
 
 - **Output Image 1:**
-  ![Example Input]()
+  ![Example Input](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_2.png)
 
 - **Output Image 2:**
-  ![Example Input]()
+  ![Example Input](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_4.png)
 
 Ensure you have a CUDA-compatible GPU and the necessary drivers installed for the best performance. This will significantly speed up the processing time and improve the quality of the generated images.
