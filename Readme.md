@@ -104,5 +104,8 @@ The `MobileNetV2_unet` model synthesizes and blends images to create the final t
 - **Output Image 2**:
   ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_8.jpg)
 
-  
-Ensure you have a CUDA-compatible GPU and the necessary drivers installed for the best performance.
+### Platform GPU and Memory Configurations for DM-VTON
+
+1. **Google Colab**: Provides NVIDIA GPUs like Tesla K80 (12 GB), T4 (16 GB), P4 (8 GB), and P100 (16 GB).
+2. **Kaggle**: Uses NVIDIA Tesla P100 GPUs with 16 GB memory.
+3. **AWS Medium Instance**: Offers instances such as `g4dn.xlarge` with NVIDIA T4 (16 GB) and `p2.xlarge` with NVIDIA K80 (12 GB) and 61 GB system memory.
