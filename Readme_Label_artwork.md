@@ -51,7 +51,7 @@ The Rouge-L metric is a well-known evaluation measure used to assess the quality
 
 ## Results
 
-- **Source Image **:
+- **Source Image**:
   ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_labelartwork_2.jpg)
 
 - **Target Image 1**:
