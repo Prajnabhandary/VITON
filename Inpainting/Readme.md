@@ -80,7 +80,4 @@ To set up the project, follow the below steps:
 - **Output Image 1:**
   ![Example Input](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_2.png)
 
-- **Output Image 2:**
-  ![Example Input](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_4.png)
-
 Ensure you have a CUDA-compatible GPU and the necessary drivers installed for the best performance. This will significantly speed up the processing time and improve the quality of the generated images.
