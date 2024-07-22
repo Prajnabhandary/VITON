@@ -53,12 +53,18 @@ The Rouge-L metric is a well-known evaluation measure used to assess the quality
 
 - **Source Image**:
   ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_labelartwork_2.jpg)
+Source Image: The source image represents the reference label artwork. This image contains the original and verified product label, which serves as the standard for comparison. It includes key elements such as the product name, weight claim, country of origin, and other regulatory information.
 
 - **Target Image 1**:
   ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_labelartwork_4.jpg)
+Target Image 1: The first target image is an example of a product label that needs to be validated against the source image.
+This image is processed to extract the text and compare it with the reference information in the source image.
+  
 
 - **Target Image 2**:
   ![Example Output](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_labelartwork_5.jpg)
+  Target Image 2: The second target image is another example of a product label that requires validation. Similar to target image 1,   
+  this image undergoes text extraction and comparison with the source image.
 
 
 ## Metrics
