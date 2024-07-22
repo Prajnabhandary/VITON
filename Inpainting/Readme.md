@@ -80,4 +80,8 @@ To set up the project, follow the below steps:
 - **Output Image 1:**
   ![Example Input](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_2.png)
 
-Ensure you have a CUDA-compatible GPU and the necessary drivers installed for the best performance. This will significantly speed up the processing time and improve the quality of the generated images.
+### Platform GPU and Memory Configurations for Inpainting
+
+1. **Google Colab**: Typically provides access to NVIDIA Tesla K80, T4, P4, or P100 GPUs with memory sizes of 12 GB GDDR5 (K80), 16 GB GDDR6 (T4), 8 GB GDDR5 (P4), and 16 GB HBM2 (P100).
+2. **Kaggle**: Offers NVIDIA Tesla P100 GPUs with 16 GB HBM2 memory.
+3. **AWS Medium Instance**: Includes instances like `g4dn.xlarge` with NVIDIA T4 (16 GB GDDR6, 16 GB system memory) and `p2.xlarge` with NVIDIA K80 (12 GB GDDR5, 61 GB system memory).
