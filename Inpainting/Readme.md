@@ -78,7 +78,7 @@ To set up the project, follow the below steps:
 ## Results
 
 - **Output Image 1:**
-  ![Example Input](https://github.com/Prajnabhandary/VITON/blob/main/Inpainting/img_2.png)
+  ![Example Input]()
 
 ### Platform GPU and Memory Configurations for Inpainting
 
