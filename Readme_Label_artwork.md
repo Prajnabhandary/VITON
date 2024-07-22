@@ -32,22 +32,6 @@ The Rouge-L metric is a well-known evaluation measure used to assess the quality
 
 - **Longest Common Subsequence (LCS)**: This approach measures the longest sequence of words that appear in both the extracted text and the reference text in the same order. It considers the order of words, making it a robust metric for text comparison in label validation.
 
-## Installation
-
-To set up the necessary tools and models for this project, follow these steps:
-
-### Prerequisites
-
-#### Set Up Paddle OCR
-```sh
-pip install paddleocr
-```
-
-#### Install NLP Libraries
-```sh
-pip install spacy
-python -m spacy download en_core_web_sm
-```
 
 ## Results
 
