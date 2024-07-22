@@ -35,7 +35,7 @@ The Rouge-L metric is a well-known evaluation measure used to assess the quality
 
 ## Results
 
-*Details of results should be added here once the implementation is complete.*
+
 
 ## Metrics
 
